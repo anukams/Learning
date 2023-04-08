@@ -12,17 +12,17 @@ pipeline {
                 // Get some code from a GitHub repository
                 git 'https://github.com/anukams/Learning.git'
 
-                // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                // Run gradle on a Unix agent.
+                sh "gradlew clean build"
 
                 // To run Maven on a Windows agent, use
-                 //bat "mvnw.cmd -Dmaven.test.failure.ignore=true clean package"
+                 //bat "mvnw.cmd -Dmaven.test.failure.ignore=true clean build"
             }
 	}
             stage('Test') {
 		    steps {
                 // Run Maven on a Unix agent.
-                sh "mvn test"
+                sh "gradlew test"
 
                 // To run Maven on a Windows agent, use
                  //bat "mvnw.cmd test"
