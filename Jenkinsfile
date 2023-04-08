@@ -13,6 +13,7 @@ pipeline {
                 git 'https://github.com/anukams/Learning.git'
 
                 // Run gradle on a Unix agent.
+		sh "chmod +x ./gradlew"
                 sh "./gradlew clean build"
 
                 // To run Maven on a Windows agent, use
