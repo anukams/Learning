@@ -6,7 +6,7 @@ plugins {
 
 group = 'WavemanLearning'
 version = '0.0.2-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
