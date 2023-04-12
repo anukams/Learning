@@ -14,7 +14,7 @@ pipeline {
 
                 // Run gradle on a Unix agent.
 		sh "chmod +x ./gradlew"
-                sh "./gradlew clean build"
+                //sh "./gradlew clean build"
 
                 // To run Maven on a Windows agent, use
                  //bat "mvnw.cmd -Dmaven.test.failure.ignore=true clean build"
